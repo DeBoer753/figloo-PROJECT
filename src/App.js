@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// REACT ROUTER:
+import { Routes, Route } from 'react-router-dom';
 
-function App() {
+// ROUTES: 
+import Home from './routes/Home';
+import Profile from './routes/Profile';
+import Crypto from './routes/Crypto';
+import Stocks from './routes/Stocks';
+import Watchlist from './routes/Watchlist';
+import RealEstate from './routes/RealEstate';
+import News from './routes/News';
+
+// COMPONENTS:
+import NavBar from './components/NavBar'
+
+// CSS:
+import styles from './css/App.module.css';
+
+// APP:
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/Profile' element={<Profile />} />
+        <Route path='/Crypto' element={<Crypto />} />
+        <Route path='/Stocks' element={<Stocks />} />
+        <Route path='/RealEstate' element={<RealEstate />} />
+        <Route path='/Watchlist' element={<Watchlist />} />
+        <Route path='/News' element={<News />} />
+      </Routes>
     </div>
   );
 }
-
-export default App;
