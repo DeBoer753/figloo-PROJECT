@@ -3,7 +3,7 @@ import React from 'react'
 export default function RealEstate() {
   return (
     <>
-      <h1>Tiny homes, big homess</h1> 
+      <h1>Real Estate</h1> 
     </>
   )
 }

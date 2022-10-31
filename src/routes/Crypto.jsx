@@ -5,7 +5,7 @@ import React from 'react'
 export default function Crypto() {
   return (
     <>
-      <h1>Shit coinsss where you aaatt?</h1>
+      <h1>Crypto</h1>
     </>
   )
 }

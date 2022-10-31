@@ -5,7 +5,7 @@ import React from 'react'
 export default function Stocks() {
   return (
     <>
-      <h1>Chadicus my man! what rockets are stoinking today?!</h1>
+      <h1>Stocks</h1>
     </>
   )
 }
