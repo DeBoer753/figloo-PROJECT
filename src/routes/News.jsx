@@ -31,19 +31,56 @@ export default function News() {
     <>
       <div className={styles.mainBox}>
         {/* {isLoading ? <h1>loading...</h1> : <h1>{nyseData.data[0].fact}</h1>} */}
-        {isLoading ? <h1>loading...</h1> :
-        <div className={styles.stockMarketBox}>
-          {nyseData.map((x, i) => { 
-            return (
-              <div key={i} className={styles.stockMarketCards}>
-                <h1>{x.title}</h1>
-                <img src={x.image_url}></img>
-                <h2>{x.description}</h2>
-                <a href={x.url} target={'_blank'} ><h3>Full Article</h3></a>
-              </div>
-            )
-          })}
+        <div className={styles.secondaryBox}>
+          <h1>Market</h1>
+          {isLoading ? <h1>loading...</h1> :
+          <div className={styles.stockMarketBox}>
+            {nyseData.map((x, i) => { 
+              return (
+                <div key={i} className={styles.stockMarketCards}>
+                  <h2>{x.title}</h2>
+                  <img src={x.image_url}></img>
+                  <h3>{x.description}</h3>
+                  <a href={x.url} target={'_blank'} ><h4>Full Article</h4></a>
+                </div>
+              )
+            })}
           </div>}
+        </div>
+        {/* {isLoading ? <h1>loading...</h1> : <h1>{nyseData.data[0].fact}</h1>} */}
+        <div className={styles.secondaryBox}>
+          <h1>Crypto</h1>
+          {isLoading ? <h1>loading...</h1> :
+          <div className={styles.stockMarketBox}>
+            {nyseData.map((x, i) => { 
+              return (
+                <div key={i} className={styles.stockMarketCards}>
+                  <h2>{x.title}</h2>
+                  <img src={x.image_url}></img>
+                  <h3>{x.description}</h3>
+                  <a href={x.url} target={'_blank'} ><h4>Full Article</h4></a>
+                </div>
+              )
+            })}
+          </div>}
+        </div>
+        {/* {isLoading ? <h1>loading...</h1> : <h1>{nyseData.data[0].fact}</h1>} */}
+        <div className={styles.secondaryBox}>
+          <h1>Real Estate</h1>
+          {isLoading ? <h1>loading...</h1> :
+          <div className={styles.stockMarketBox}>
+            {nyseData.map((x, i) => { 
+              return (
+                <div key={i} className={styles.stockMarketCards}>
+                  <h2>{x.title}</h2>
+                  <img src={x.image_url}></img>
+                  <h3>{x.description}</h3>
+                  <a href={x.url} target={'_blank'} ><h4>Full Article</h4></a>
+                </div>
+              )
+            })}
+          </div>}
+        </div>
       </div>
     </>
   )
