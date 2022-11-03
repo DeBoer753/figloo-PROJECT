@@ -21,7 +21,7 @@
 }
 
 .secondaryBox {
-  background-color: rgb(166, 166, 166);
+  background-color: rgb(70, 70, 70);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -31,13 +31,17 @@
 }
 
 .secondaryBox h1 {
-  margin: 10px 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin: 0px 0;
+  padding: 10px 0;
   font-size: 25px;
   color: white;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.514);
 }
 
 .stockMarketBox {
-  border-top: 1px solid white;
+  /* border-top: 1px solid white; */
   color: white;
   display: flex;
   flex-direction: column;
@@ -61,10 +65,10 @@
   margin: 10px 18px 10px 18px;
 }
 
-.stockMarketCards h3 {
+.stockMarketCards p {
   text-align: left;
   font-size: 15px;
-  margin: 5px 18px 0 18px;
+  margin: 10px 18px 0 18px;
 }
 
 .stockMarketCards a {
@@ -74,15 +78,17 @@
 .stockMarketCards h4 {
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
-  color: rgb(0, 0, 0);
+  color: black;
   width: 100px;
   margin-left: 20px;
   padding: 2px;
+  transition: 300ms;
   text-decoration: none;
 }
 
 .stockMarketCards h4:hover {
-  /* transition: 0.5ms black ease; */
+  background-color: rgba(0, 255, 255, 0.259);
+  color: white
 }
 
 .stockMarketCards img {
