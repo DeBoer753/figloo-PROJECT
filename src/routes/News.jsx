@@ -16,42 +16,42 @@ export default function News() {
   const [realEstateData, setRealEstateData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
-  // // Fetched: (finance)
-  // useEffect(() => {
-  //   fetch(`https://api.marketaux.com/v1/news/all?exchanges=NYSE&filter_entities=true&limit=10&published_after=2022-10-25T18:44&api_token=9cMPFNNDa0hmlvpRyLyf8sPU01pdB3HtScUqhytl`)
-  //   .then(res => res.json())
-  //   .then(data => {
-  //     setNyseData(data.data) // Tip: set data to an array if you want to use map method in return statement.
-  //     setIsLoading(false)
-  //   });
-  //  // .catch(error => console.error('data not loaded', error)) ••• issue with this line.
-  // }, [])
-  // console.log('Market Fetched Data:', nyseData)
+  // Fetched: (finance)
+  useEffect(() => {
+    fetch(`https://api.marketaux.com/v1/news/all?exchanges=NYSE&filter_entities=true&limit=10&published_after=2022-10-25T18:44&api_token=9cMPFNNDa0hmlvpRyLyf8sPU01pdB3HtScUqhytl`)
+    .then(res => res.json())
+    .then(data => {
+      setNyseData(data.data) // Tip: set data to an array if you want to use map method in return statement.
+      setIsLoading(false)
+    });
+   // .catch(error => console.error('data not loaded', error)) ••• issue with this line.
+  }, [])
+  console.log('Market Fetched Data:', nyseData)
 
-  // // Fetched: (crypto) ••• Not actually crypto. find new api link
-  // useEffect(() => {
-  //   fetch(`https://crypto-news15.p.rapidapi.com/news/amb`)
-  //   .then(res => res.json())
-  //   .then(data => {
-  //     console.log('TEST: ', data);
-  //     setCryptoData(data.data) // Tip: set data to an array if you want to use map method in return statement.
-  //     setIsLoading(false)
-  //   });
-  //   // .catch(error => console.error('data not loaded', error)) ••• issue with this line.
-  // }, [])
-  // console.log('Crypto Fetched Data:', cryptoData)
+  // // Fetched: (crypto)
+  useEffect(() => {
+    fetch(`http://cryptopanic.com/api/v1/posts/?auth_token=c9e9aaa5978350bc96299915d63c9647e10e2a89`)
+    .then(res => console.log("RESSSINN: ", res.text()))
+    .then(data => {
+      console.log('TEST: ', data);
+      setCryptoData(data.data) // Tip: set data to an array if you want to use map method in return statement.
+      setIsLoading(false)
+    })
+    .catch(error => console.log('data not loaded', error))
+  }, [])
+  console.log('Crypto Fetched Data:', cryptoData)
 
-  // // Fetched: (real estate) ••• Consider new api link
-  // useEffect(() => {
-  //   fetch(`https://api.marketaux.com/v1/news/all?industries=Real Estate&filter_entities=true&limit=10&published_after=2022-11-01T18:45&api_token=9cMPFNNDa0hmlvpRyLyf8sPU01pdB3HtScUqhytl`)
-  //   .then(res => res.json())
-  //   .then(data => {
-  //     setRealEstateData(data.data) // Tip: set data to an array if you want to use map method in return statement.
-  //     setIsLoading(false)
-  //   });
-  //   // .catch(error => console.error('data not loaded', error)) ••• issue with this line.
-  // }, [])
-  // console.log('Real Estate Fetched Data:', realEstateData)
+  // Fetched: (real estate) ••• Consider new api link
+  useEffect(() => {
+    fetch(`https://api.marketaux.com/v1/news/all?industries=Real Estate&filter_entities=true&limit=10&published_after=2022-11-01T18:45&api_token=9cMPFNNDa0hmlvpRyLyf8sPU01pdB3HtScUqhytl`)
+    .then(res => res.json())
+    .then(data => {
+      setRealEstateData(data.data) // Tip: set data to an array if you want to use map method in return statement.
+      setIsLoading(false)
+    });
+    // .catch(error => console.error('data not loaded', error)) ••• issue with this line.
+  }, [])
+  console.log('Real Estate Fetched Data:', realEstateData)
 
   return (
     <>
